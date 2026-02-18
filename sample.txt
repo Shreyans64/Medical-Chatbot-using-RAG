@@ -1,0 +1,36 @@
+2025-12-03 23:10:24.151 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+Traceback (most recent call last):
+  File "c:\Users\gbsan\Downloads\MEDICAL-CHATBOT\medibot.py", line 108, in <module>
+    main()
+    ~~~~^^
+  File "c:\Users\gbsan\Downloads\MEDICAL-CHATBOT\medibot.py", line 51, in main
+    st.title("Ask Chatbot!")
+    ~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\gbsan\anaconda3\Lib\site-packages\streamlit\runtime\metrics_util.py", line 444, in wrapped_func
+    result = non_optional_func(*args, **kwargs)
+  File "C:\Users\gbsan\anaconda3\Lib\site-packages\streamlit\elements\heading.py", line 237, in title
+    return self.dg._enqueue(
+           ~~~~~~~~~~~~~~~~^
+        "heading",
+        ^^^^^^^^^^
+    ...<2 lines>...
+        ),
+        ^^
+    )
+    ^
+  File "C:\Users\gbsan\anaconda3\Lib\site-packages\streamlit\delta_generator.py", line 459, in _enqueue
+    _maybe_print_use_warning()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\gbsan\anaconda3\Lib\site-packages\streamlit\delta_generator.py", line 138, in _maybe_print_use_warning
+    elif not runtime.exists() and config.get_option(
+                                  ~~~~~~~~~~~~~~~~~^
+        "global.showWarningOnDirectExecution"
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ):
+    ^
+  File "C:\Users\gbsan\anaconda3\Lib\site-packages\streamlit\config.py", line 194, in get_option
+    config_options = get_config_options()
+  File "C:\Users\gbsan\anaconda3\Lib\site-packages\streamlit\config.py", line 1534, in get_config_options
+    file_contents = input.read()
+  File "<frozen codecs>", line 325, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
